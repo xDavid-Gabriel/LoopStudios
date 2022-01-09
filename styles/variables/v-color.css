@@ -1,0 +1,21 @@
+html {
+  --primary: hsl(0, 0%, 100%);
+
+  --secondary-2: hsl(0, 0%, 0%);
+  --secondary-1: hsl(0, 0%, 55%);
+
+  --secondary: var(--secondary-2);
+  --secondary-light: var(--secondary-1);
+
+  /* --link: var(--secondary-8);
+  --link-hover: var(--secondary-5); */
+}
+
+.h {
+  color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 55%);
+
+  color: hsl(0, 0%, 41%);
+  background: linear-gradient();
+}

@@ -1,0 +1,361 @@
+/* Variables */
+@import url("variables/v-color.css");
+@import url("variables/v-typography.css");
+@import url("variables/v-grid.css");
+
+/* Base */
+@import url("base/reset.css");
+@import url("base/typography.css");
+@import url("base/grid.css");
+@import url("base/grid-cols.css");
+
+/* Libraries */
+@import url("libraries/hamburgers.css");
+
+/* Header */
+header {
+  background: url(../images/desktop/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 50px 50px 0 50px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+}
+.contenedor img {
+  width: 180px;
+}
+#btn-menu {
+  display: none;
+}
+.menu {
+  position: static;
+  opacity: 1;
+  visibility: visible;
+  width: auto;
+  padding: 0;
+  display: flex;
+  margin-left: 0%;
+  background: none;
+  font-size: 0.8em;
+  list-style: none;
+}
+.contenido--menu {
+  margin: 20px;
+}
+.contenido--menu > a {
+  color: var(--primary);
+}
+/*HERO*/
+.contenido__hero {
+  border: 2px solid white;
+
+  padding: 20px;
+}
+
+/*SECCION 2*/
+
+.seccion--2 {
+  position: relative;
+  min-height: 54vh;
+  margin-bottom: 70px;
+}
+.contenido__imagen {
+  margin-top: 120px;
+}
+.contenido__leader {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 54%;
+  background: var(--primary);
+  padding: 45px 116px 0px 116px;
+}
+.contenido__leader > h2 {
+  color: var(--seccondary);
+  font-weight: var(--weight-bold);
+  font-size: 40px;
+}
+
+/*SECCION 4*/
+
+.our {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.title__our > h3 {
+  color: var(--seccondary);
+}
+.boton__our > button {
+  color: var(--primary);
+  background: black;
+  padding: 10px;
+  width: 150px;
+  height: 40px;
+  border: 0px;
+  cursor: pointer;
+  letter-spacing: 3px;
+}
+.boton__our:hover > button {
+  background: transparent;
+  border: 2px solid black;
+  color: var(--seccondary);
+}
+
+/*FOTOS*/
+.contenido--fotos {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.contenido--fotos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.contenido--fotos > h4 {
+  color: var(--primary);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 29px;
+  text-align: center;
+}
+.hover {
+  background: rgba(235, 232, 232, 0.719);
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: 1s all;
+}
+.contenido--fotos:hover .hover {
+  width: 100%;
+}
+.contenido--fotos:hover > img {
+  transform: scale(1.1);
+  transition: 1s all;
+}
+.contenido--fotos:hover > h4 {
+  z-index: 10;
+  color: black;
+}
+/*FOOTER*/
+.footer {
+  margin-top: 100px;
+  background: black;
+}
+
+.contenido--menu-footer {
+  margin: 0 20px 0 0;
+}
+
+.menu-footer {
+  padding: 0;
+  display: flex;
+  font-size: 0.8em;
+  list-style: none;
+}
+
+.logo-social {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.social {
+  display: flex;
+}
+.social > a {
+  margin: 0 0 0 20px;
+}
+.navegacion {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--primary);
+  margin-bottom: 50px;
+}
+
+.copy {
+  margin-bottom: 0;
+}
+
+/*Media query*/
+
+@media (max-width: 1033px) {
+  .contenido__leader {
+    padding: 50px 50px 0px 50px;
+  }
+  .contenido__leader > h2 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 900px) {
+  /*Hero*/
+  .hero__title {
+    font-size: 35px;
+  }
+
+  .contenido__leader > h2 {
+    font-size: 25px;
+  }
+  .contenido__leader > p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 700px) {
+  .menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background: black;
+    width: 100%;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    z-index: -999;
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    margin-left: -100%;
+    transition: all 0.5s;
+    min-height: 100vh;
+  }
+  .mostrar {
+    /* opacity: 1; */
+    /* visibility: visible; */
+    margin-left: 0;
+  }
+
+  .contenido--menu {
+    padding: 0;
+    width: 95px;
+    font-size: 25px;
+    font-family: var(--font-1);
+    text-transform: uppercase;
+  }
+  #btn-menu {
+    display: block;
+  }
+  /*SECCION 3*/
+  .contenido__imagen {
+    position: relative;
+    z-index: -20;
+  }
+  .contenido__leader {
+    z-index: -10;
+  }
+  /*SECCION 4*/
+  .fotos {
+    position: relative;
+  }
+
+  .our {
+    justify-content: center;
+  }
+
+  .boton__our > button {
+    position: absolute;
+    left: 50%;
+    bottom: -70px;
+    transform: translate(-50%);
+  }
+  .contenido--fotos {
+    height: 210px;
+  }
+  .contenido--fotos img {
+    object-fit: cover;
+    object-position: top;
+  }
+  .contenido--fotos > h4 {
+    top: 0;
+    left: 38px;
+    transform: translate(0, 33%);
+    font-size: 29px;
+    text-align: start;
+  }
+  /*Footer*/
+  .footer {
+    position: relative;
+  }
+
+  .navegacion {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-footer {
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+  .contenido--menu-footer {
+    margin: 10px;
+  }
+
+  .logo-social {
+    flex-direction: column;
+    align-items: center;
+  }
+  .social {
+    position: absolute;
+    bottom: 88px;
+  }
+}
+
+@media (max-width: 563px) {
+  .contenido__leader {
+    text-align: center;
+    padding: 15px 35px 0px 35px;
+  }
+}
+
+@media (max-width: 500px) {
+  .contenedor img {
+    width: 150px;
+  }
+  .contenido__imagen {
+    margin-top: 50px;
+  }
+  .contenedor {
+    padding: 20px 20px 0 20px;
+  }
+
+  .contenido__leader {
+    width: 100%;
+    padding: 25px;
+  }
+  .seccion--2 {
+    min-height: 80vh;
+  }
+  /*FOOTER*/
+}
+
+@media (max-width: 280px) {
+  .social {
+    bottom: 112px;
+  }
+}
